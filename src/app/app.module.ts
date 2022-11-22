@@ -3,16 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CardComponent } from './card/card.component';
+import { CardFormComponent } from './card-form/card-form.component';
+import { BgDirective } from './directives/background.directive';
+import { clickedCardDirective } from './directives/clicked.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardComponent,
+    CardFormComponent,
+    BgDirective,
+    clickedCardDirective,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

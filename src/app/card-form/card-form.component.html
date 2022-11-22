@@ -1,0 +1,54 @@
+<div class="w-10/12 m-auto border my-16 p-10">
+  <div>
+    <label
+      for="title"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >Card Title</label
+    >
+    <input
+      type="text"
+      id="title"
+      #title
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Card title"
+      required
+    />
+  </div>
+  <div class="my-5">
+    <label
+      for="message"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >Card Description</label
+    >
+    <textarea
+      rows="4"
+      #description
+      id="message"
+      class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Card Description..."
+    ></textarea>
+  </div>
+  <div class="my-5">
+    <label
+      for="link"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >Card Link</label
+    >
+    <input
+      type="text"
+      #link
+      id="link"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Card Link"
+      required
+    />
+  </div>
+  <div>
+    <input
+      type="submit"
+      (click)="addCard(title.value, description.value, link.value)"
+      value="Add"
+      class="focus:outline-none w-full text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+    />
+  </div>
+</div>

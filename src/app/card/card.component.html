@@ -1,0 +1,15 @@
+<div
+  class="border-2 w-80 h-full text-center drop-shadow-lg rounded"
+  [bgOnHover]="title"
+  [clickedCard]="title"
+>
+  <h4 class="text-blue-400 text-xl my-6">{{ title }}</h4>
+  <div>
+    <p class="my-4">
+      {{ description }}
+    </p>
+  </div>
+  <div class="bg-blue-200 mx-0 py-3 text-right pr-4">
+    <a href="/" class="text-blue-500 text-md">{{ link }}</a>
+  </div>
+</div>
