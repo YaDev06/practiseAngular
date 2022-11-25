@@ -7,6 +7,7 @@ import { CardComponent } from './card/card.component';
 import { CardFormComponent } from './card-form/card-form.component';
 import { BgDirective } from './directives/background.directive';
 import { clickedCardDirective } from './directives/clicked.directive';
+import { IfDirective } from './directives/if.directive';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { clickedCardDirective } from './directives/clicked.directive';
     CardFormComponent,
     BgDirective,
     clickedCardDirective,
+    IfDirective,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

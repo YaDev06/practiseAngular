@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, BehaviorSubject, Observable } from 'rxjs';
 import { Card } from './card/card';
 
 @Injectable({
@@ -32,10 +32,24 @@ export class CardService {
     },
   ];
 
+  card$ = new BehaviorSubject<Card[]>(this.cards);
+
   constructor() {}
+
+  interval$ = new Observable((subscriber) => {
+    // setInterval(() => {
+      subscriber.next(this.cardClicked$);
+      subscriber.next(this.cardHovered$);
+    // }, 1000);
+  });
 
   addCard(card: Card) {
     this.cards.push(card);
+  }
+
+  deleteCard(idx: number) {
+    this.cards.splice(idx, 1);
+    this.card$.next(this.cards);
   }
 
   cardHovered$ = new Subject<string>();
