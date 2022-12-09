@@ -1,18 +1,2 @@
-<div>
-  <h1 class="text-3xl font-semibold text-center mt-5">
-    Clicked Card {{ clickedCard }} <br />
-    Hovered Card {{ hoveredCard }}
-  </h1>
-  <h6 *appIf="false">Yahyoxon</h6>
-  <div class="flex m-auto w-[50rem] h-100 flex-wrap gap-5 mt-5">
-    <ng-container *ngFor="let card of cards; let i = index">
-      <app-card
-        [clickedCard]="card.title"
-        [bgOnHover]="card.title"
-        [card]="card"
-        [index]="i"
-      ></app-card>
-    </ng-container>
-  </div>
-  <app-card-form></app-card-form>
-</div>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>

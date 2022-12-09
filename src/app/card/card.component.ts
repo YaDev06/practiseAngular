@@ -15,17 +15,7 @@ export class CardComponent implements OnInit, OnDestroy {
   @Input('index') index!: number;
   sub$ = new Subject();
 
-  ngOnInit() {
-    this.CardService.interval$.pipe(takeUntil(this.sub$)).subscribe((value) => {
-      // this.clickedCard = value;
-      console.log(value);
-    });
-
-    this.CardService.interval$.pipe(takeUntil(this.sub$)).subscribe((value) => {
-      // this.hoveredCard = value;
-      console.log(value);
-    });
-  }
+  ngOnInit() {}
 
   ngOnDestroy(): void {
     console.log(this.card.title + 'is destroyed');
